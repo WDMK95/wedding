@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('hash');
+            $table->string('name')->nullable();
+            $table->string('hash')->nullable();
+            $table->string('group_id')->nullable();
+            $table->boolean('attending')->nullable();
             $table->timestamps();
         });
     }

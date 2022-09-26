@@ -22,7 +22,7 @@
 
 <body>
     <div id="app">
-        <invitation />
+        <invitation :users="{{$users}}" />
     </div>
 </body>
 

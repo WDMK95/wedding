@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class InvitationController extends Controller
@@ -11,9 +12,9 @@ class InvitationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($hash)
+    public function index(User $hash)
     {
-        
+        return view('welcome')->with(['users' => User::where('group_id', $hash->group_id)->get()]);
     }
 
     /**
