@@ -24,6 +24,7 @@
     <div id="app">
         <invitation :users="{{$users}}" />
     </div>
+
 </body>
 
 </html>

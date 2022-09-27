@@ -6,6 +6,11 @@
 
 import './bootstrap';
 import '../css/app.css'
+import VueSweetalert2 from 'vue-sweetalert2';
+
+// If you don't need the styles, do not connect
+import 'sweetalert2/dist/sweetalert2.min.css';
+
 import { createApp } from 'vue';
 
 /**
@@ -15,9 +20,14 @@ import { createApp } from 'vue';
  */
 
 const app = createApp({});
-
+const options = {
+    confirmButtonColor: '#4287f5',
+    cancelButtonColor: '#ff7674',
+  };
 import Invitation from './components/Invitation.vue';
 app.component('invitation', Invitation);
+app.use(VueSweetalert2, options);
+
 
 /**
  * The following block of code may be used to automatically register your

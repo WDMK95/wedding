@@ -19,8 +19,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
-        'password',
+        'group_id',
+        'hash',
+        'attending',
+        'answered_rsvp',
+        'excel_id'
     ];
 
     /**
@@ -40,6 +43,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'attending' => 'boolean'
     ];
 
 

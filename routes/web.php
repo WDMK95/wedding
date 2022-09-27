@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/invitation/{hash}', [InvitationController::class, 'index']);
+Route::get('/skrieni-rute/custom-export', [InvitationController::class, 'export']);
+Route::get('/skrieni-rute/raw', [InvitationController::class, 'raw']);
+Route::post('/invitation/submit-rsvp/{hash}', [InvitationController::class, 'rsvp']);

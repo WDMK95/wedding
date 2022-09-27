@@ -12,7 +12,7 @@
                     <h5 class="text-gray-900 text-xl font-medium mb-2">
                         Потврди присуство
                     </h5>
-                    <div v-for="(user, index) in users" :key="index">
+                    <div v-for="(user, index) in data" :key="index">
                         <label
                             class="inline-flex items-center mt-3 cursor-pointer"
                         >
@@ -20,6 +20,7 @@
                                 type="checkbox"
                                 :checked="user.attending"
                                 class="form-checkbox h-5 w-5 text-gray-600"
+                                v-model="user.attending"
                             /><span class="unselectable ml-2">{{
                                 user.name
                             }}</span> </label
@@ -29,19 +30,20 @@
                     <button
                         type="button"
                         @click="submitRSVP"
+                        :disabled="disabledBtn"
                         class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
                     >
                         Потврди
                     </button>
 
-                    <button
+                    <!-- <button
                         v-if="rsvped"
                         @click="cancelAttendance"
                         type="button"
                         class="inline-block px-6 py-2.5 bg-red-700 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-800 hover:shadow-lg focus:bg-red-800 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-900 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50"
                     >
                         Откажи присуство
-                    </button>
+                    </button> -->
                 </div>
             </div>
         </div>
@@ -94,20 +96,43 @@ export default {
     props: ["users"],
     data() {
         return {
-            going: [],
+            data: this.users,
+            disabledBtn: false,
         };
     },
     computed: {
         rsvped() {
-            return this.users.filter((x) => x.attending).length;
+            this.refreshKey;
+
+            return this.kopija.filter((x) => x.attending).length;
+        },
+        currUser() {
+            return window.location.pathname.replace("/invitation/", "");
         },
     },
     methods: {
         submitRSVP() {
-            console.log("prati gi");
+            this.disabledBtn = true;
+            axios
+                .post(`submit-rsvp/${this.currUser}`, { users: this.data })
+                .then(({ data }) => {
+                    this.disabledBtn = false;
+                    this.$swal(data.message);
+                })
+                .catch((e) => {
+                    this.disabledBtn = false;
+                });
         },
         cancelAttendance() {
-            console.log("brisi gi");
+            this.data = this.data.map((x) => ({ ...x, attending: false }));
+
+            axios
+                .post(`submit-rsvp/${this.currUser}`, { users: this.data })
+                .then(({ data }) => {
+                    // location.reload();
+
+                    console.log(data.message);
+                });
         },
     },
 };
