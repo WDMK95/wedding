@@ -67,6 +67,14 @@
                         </tfoot>
                     </table>
 
+
+                    <div class="flex justify-around align-start py-1">
+                        <button type="button" onclick="runCommand()"
+                            class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3">
+                            Земи од Google Spreadsheet
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -84,12 +92,25 @@
 
         getData()
 
+        async function runCommand() {
+            let response = fetch('pusti-komandu').
+            then((response) => response.json())
+                .then((data) => {
+                    alert(data.message)
+                    location.reload();
+                })
+
+        }
+
         function populateTable(data) {
 
             $('#data_marketing_table').DataTable({
                 data: data,
                 order: [
                     [1, 'desc']
+                ],
+                order: [
+                    [3, 'desc']
                 ],
                 "columns": [{
                         data: 'excel_id'
@@ -105,7 +126,10 @@
                         data: 'group_id'
                     },
                     {
-                        data: 'attending'
+                        data: 'attending',
+                        render: function (data, type, row, meta) {
+                            return data ? 'yes' : 'no'
+                        }
                     },
                     {
                         data: 'answered_rsvp'

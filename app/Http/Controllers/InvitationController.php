@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\RateLimiter;
 
 class InvitationController extends Controller
@@ -15,7 +16,7 @@ class InvitationController extends Controller
      */
     public function index(User $hash)
     {
-        return view('welcome')->with(['users' => User::where('group_id', $hash->group_id)->get(['name', 'hash', 'attending'])]);
+        return view('invitation')->with(['users' => User::where('group_id', $hash->group_id)->get(['name', 'hash', 'attending'])]);
     }
 
     public function rsvp(Request $request, User $hash)
@@ -52,7 +53,7 @@ class InvitationController extends Controller
      */
     public function export(Request $request)
     {
-        return view('list-users', ['users' => User::all()]);
+        return view('list-users', ['users' => User::orderBy('group_id', 'DESC')->get()]);
     }
     public function raw(Request $request)
     {
@@ -70,37 +71,9 @@ class InvitationController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function importData()
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        Artisan::call('guests:import');
+        return response()->json(['message' => 'Uspesno importirani od speradsheet']);
     }
 }
