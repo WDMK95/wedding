@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
+
+/* @font-face {
+    font-family: 'Miama Nueva';
+    src: local('Miama Nueva'), url(./fonts/miamanueva.ttf) format('ttf');
+  } */
+  @font-face {
+    font-family: 'constani';
+    src: local('constani'), url(../../public/fonts/constani.ttf) format('truetype');
+  }
+  /* @font-face {
+    font-family: 'BadScript';
+    src: local('Bad Script'), url(../../public/fonts/BadScript-Regular.ttf) format('truetype');
+  } */
+  /* @font-face {
+    font-family: 'LovelyGraceBG';
+    src: local('Lovely Grace BG'), url(../../public/fonts/LovelѕGracе.ttf) format('truetype');
+  } */
+
+  
+  
 @tailwind utilities;

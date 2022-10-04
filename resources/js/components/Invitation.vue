@@ -1,5 +1,7 @@
 <template>
-    <div class="flex w-full justify-between font-mono mt-96 sm:mt-0">
+    <div
+        class="flex w-full justify-between font-sans font-medium mt-96 sm:mt-0"
+    >
         <!-- <div class="justify-start p-14" v-show="rsvpVisible">
             <div class="rounded-lg shadow-lg bg-fuchsia-50">
                 <img
@@ -47,7 +49,7 @@
                     class="rounded-lg shadow-lg bg-fuchsia-50"
                     v-if="detailsVisible"
                 >
-                    <div class="p-6">
+                    <div class="p-6 pt-10">
                         <div class="">
                             <div class="">
                                 <h5

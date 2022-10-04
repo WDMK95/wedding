@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Покана за свадба | Дијана и Виктор</title>
+
     @vite('resources/js/app.js')
     <style>
         body {
@@ -14,7 +15,8 @@
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover;
+            font-family: 'constani';
+            font-size: 22px;
         }
 
     </style>
@@ -22,6 +24,7 @@
 
 <body>
     <div id="app">
+        <h3>The quick bronw sox</h3>
         <invitation :users="{{$users}}" />
     </div>
 
