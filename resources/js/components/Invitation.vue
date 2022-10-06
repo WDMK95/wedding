@@ -61,7 +61,7 @@
                                     Дата: 30ти Октомври, 2022
                                 </p>
                                 <p class="flex justify-center py-1">
-                                    Прием: 19:00 - 19:30 часот
+                                    Прием: 18:00 - 18:30 часот
                                 </p>
                                 <p class="flex justify-center align-start py-1">
                                     Локација:

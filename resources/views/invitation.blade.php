@@ -24,7 +24,6 @@
 
 <body>
     <div id="app">
-        <h3>The quick bronw sox</h3>
         <invitation :users="{{$users}}" />
     </div>
 
