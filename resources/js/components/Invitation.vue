@@ -2,63 +2,31 @@
     <div
         class="flex w-full justify-between font-sans font-medium mt-96 sm:mt-0"
     >
-        <!-- <div class="justify-start p-14" v-show="rsvpVisible">
-            <div class="rounded-lg shadow-lg bg-fuchsia-50">
-                <img
-                    src="../../images/save_date.jpg"
-                    width="400"
-                    height="400"
-                    alt="Save the Date"
-                />
-                <div class="p-6">
-                    <h5 class="text-gray-900 text-xl font-medium mb-2">
-                        Потврди присуство
-                    </h5>
-                    <div v-for="(user, index) in data" :key="index">
-                        <label
-                            class="inline-flex items-center mt-3 cursor-pointer"
-                        >
-                            <input
-                                type="checkbox"
-                                :checked="user.attending"
-                                class="form-checkbox h-5 w-5 text-gray-600"
-                                v-model="user.attending"
-                            /><span class="unselectable ml-2">{{
-                                user.name
-                            }}</span> </label
-                        ><br />
-                    </div>
-                    <br />
-                    <button
-                        type="button"
-                        @click="submitRSVP"
-                        :disabled="disabledBtn"
-                        class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
-                    >
-                        Потврди
-                    </button>
-                </div>
-            </div>
-        </div> -->
-
         <div
             class="justify-end w-full p-4 sm:p-14 2xl:w-4/12 xl:w-5/12 md:w-7/12 sm:w-full"
         >
             <Transition name="slide-fade">
                 <div
-                    class="rounded-lg shadow-lg bg-fuchsia-50"
+                    class="rounded-lg shadow-lg bg-fuchsia-100"
                     v-if="detailsVisible"
                 >
                     <div class="p-6 pt-10">
-                        <div class="">
+                        <div class="px-6">
                             <div class="">
-                                <h5
-                                    class="text-gray-900 text-3xl font-medium mb-2 flex justify-center"
-                                >
-                                    Детали
-                                </h5>
+                                <div class="relative flex py-3 items-center">
+                                    <div
+                                        class="flex-grow border-t border-gray-400"
+                                    ></div>
+                                    <span
+                                        class="flex-shrink mx-4 text-gray-900 text-3xl"
+                                        >Дијана & Виктор</span
+                                    >
+                                    <div
+                                        class="flex-grow border-t border-gray-400"
+                                    ></div>
+                                </div>
                                 <p class="flex justify-center py-1">
-                                    Дата: 30ти Октомври, 2022
+                                    Дата: 30-ти Октомври, 2022
                                 </p>
                                 <p class="flex justify-center py-1">
                                     Прием: 18:00 - 18:30 часот
@@ -67,14 +35,25 @@
                                     Локација:
                                     <a
                                         target="_blank"
-                                        class="inline-block px-6 py-1.5 bg-transparent text-blue-600 font-medium text-xs leading-tight rounded bg-fuchsia-100 focus:text-blue-700 focus:fuchsia-100 focus:outline-none focus:ring-0 active:bg-fuchsia-200 active:text-blue-800 transition duration-300 ease-in-out ml-2"
+                                        class="flex justify-center align-center inline-block px-6 py-2 bg-transparent text-blue-600 font-medium text-xs leading-tight rounded bg-fuchsia-200 focus:text-blue-700 focus:fuchsia-200 focus:outline-none focus:ring-0 active:bg-fuchsia-300 active:text-blue-800 transition duration-300 ease-in-out ml-2"
                                         href="https://www.google.com/maps/place/Centropalas+letna+gradina/@42.1647837,21.7508051,17z/data=!3m1!4b1!4m5!3m4!1s0x135451e75876c7ff:0xa498503cb01ca030!8m2!3d42.1647837!4d21.7529991"
-                                        >Центропалас Летна Градина, Куманово</a
+                                        ><img
+                                            src="../../images/restoran.png"
+                                            class="mr-2"
+                                            width="14"
+                                            height="14"
+                                            alt="Локација"
+                                        /><span class="pt-1"
+                                            >Центропалас Летна Градина,
+                                            Куманово</span
+                                        ></a
                                     >
                                 </p>
-
+                                <hr
+                                    class="mt-4 h-px bg-gray-300 border-0 dark:bg-gray-700"
+                                />
                                 <p
-                                    class="flex justify-center align-start py-1 w-1/16"
+                                    class="flex justify-center align-start py-1 w-1/16 text-center"
                                 >
                                     Сите среќни моменти се потполни кога ги
                                     споделуваш со роднини и пријатели. Затоа ве
@@ -90,7 +69,7 @@
                                     <span>Семејство Ефтимови</span>
                                 </div>
                             </div>
-                            <div class="flex justify-around align-start py-1">
+                            <!-- <div class="flex justify-around align-start py-1">
                                 <button
                                     type="button"
                                     @click="showRSVP"
@@ -99,24 +78,34 @@
                                 >
                                     Потврди присуство
                                 </button>
-                            </div>
+                            </div> -->
                         </div>
-
+                        <hr
+                            class="mt-4 h-px bg-gray-300 border-0 dark:bg-gray-700"
+                        />
                         <Transition name="slide-fade">
-                            <div class="" v-show="rsvpVisible">
+                            <div class="">
                                 <div class="justify-center">
-                                    <!-- <img
-                    src="../../images/save_date.jpg"
-                    width="400"
-                    height="400"
-                    alt="Save the Date"
-                /> -->
                                     <div class="px-6 pt-4">
-                                        <h5
+                                        <!-- <h5
                                             class="text-gray-900 text-xl font-medium mb-2 flex justify-center"
                                         >
                                             Потврди присуство
-                                        </h5>
+                                        </h5> -->
+                                        <div
+                                            class="relative flex py-3 items-center"
+                                        >
+                                            <div
+                                                class="flex-grow border-t border-gray-400"
+                                            ></div>
+                                            <span
+                                                class="flex-shrink mx-4 text-gray-900 text-3xl"
+                                                >Потврди присуство</span
+                                            >
+                                            <div
+                                                class="flex-grow border-t border-gray-400"
+                                            ></div>
+                                        </div>
                                         <div
                                             v-for="(user, index) in data"
                                             :key="index"
@@ -138,6 +127,13 @@
                                         </div>
 
                                         <div class="flex justify-center mt-3">
+                                            <!-- <button
+                                                type="button"
+                                                @click="showDetails"
+                                                class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
+                                            >
+                                                Назад
+                                            </button> -->
                                             <button
                                                 type="button"
                                                 @click="submitRSVP"
@@ -145,13 +141,6 @@
                                                 class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
                                             >
                                                 Потврди
-                                            </button>
-                                            <button
-                                                type="button"
-                                                @click="showDetails"
-                                                class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
-                                            >
-                                                Назад
                                             </button>
                                         </div>
                                     </div>
@@ -168,9 +157,7 @@
 <script>
 export default {
     mounted() {
-        setTimeout(() => {
-            this.detailsVisible = true;
-        }, 900);
+        this.detailsVisible = true;
     },
     props: ["users"],
     data() {
