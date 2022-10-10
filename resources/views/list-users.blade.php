@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.dataTables.min.css">
     <title>Покана за свадба | Дијана и Виктор</title>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     {{-- These scripts should be added to main layout file --}}
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
