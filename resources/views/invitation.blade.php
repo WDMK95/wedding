@@ -10,17 +10,11 @@
     @vite('resources/js/app.js')
     <style>
         body {
-            background: url("/images/dijana-viktor.jpg") no-repeat center center fixed;
+            background: url({{ Vite::asset('resources/images/dijana-viktor.jpg') }}) no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-
-            /* background-image: url("/images/dijana-viktor.jpg");
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover; */
             font-family: 'constani';
             font-size: 22px;
         }

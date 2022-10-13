@@ -13,6 +13,13 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 
 import { createApp } from 'vue';
 
+import.meta.glob([
+    '../images/**',
+    '../fonts/**',
+  ]);
+  
+
+  
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready
