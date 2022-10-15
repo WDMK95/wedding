@@ -82,8 +82,7 @@
 
     <script>
         async function getData() {
-            let response = fetch('raw').
-            then((response) => response.json())
+            let response = fetch('raw').then((response) => response.json())
                 .then((data) => {
                     // console.log(data);
                     populateTable(data.users);
