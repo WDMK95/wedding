@@ -18,8 +18,8 @@
                                         class="flex-grow border-t border-gray-400"
                                     ></div>
                                     <span
-                                        class="flex-shrink mx-4 text-gray-900 text-3xl" style="font-family:'lovelygrace';font-size:350%;color:#4b024b"
-                                        >Дијана и Виктор</span
+                                        class="flex items-center flex-col md:flex-row  justify-items-center mx-4 text-gray-900 text-3xl" style="font-family:'lovelygrace';font-size:350%;color:#4b024b"
+                                        ><div class="md:mr-2">Дијана</div><div class="md:mr-2"> и </div><div>Виктор</div></span
                                     >
                                     <div
                                         class="flex-grow border-t border-gray-400"

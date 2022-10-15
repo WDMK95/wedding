@@ -28,8 +28,9 @@ import.meta.glob([
 
 const app = createApp({});
 const options = {
-    confirmButtonColor: '#4287f5',
+    confirmButtonColor: '#6b21a8',
     cancelButtonColor: '#ff7674',
+    color: '#330033',
   };
 import Invitation from './components/Invitation.vue';
 app.component('invitation', Invitation);

@@ -17,7 +17,7 @@
             background-size: cover;
             font-family: 'linbiolinum';
             font-size: 20px;
-            color: #660066;
+            color: #330033;
         }
 
     </style>
