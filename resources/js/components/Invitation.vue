@@ -7,7 +7,7 @@
         >
             <Transition name="slide-fade">
                 <div
-                    class="rounded-lg shadow-lg bg-fuchsia-100"
+                    class="rounded-lg shadow-lg bg-rose-50"
                     v-if="detailsVisible"
                 >
                     <div class="p-6 pt-10">
@@ -18,26 +18,22 @@
                                         class="flex-grow border-t border-gray-400"
                                     ></div>
                                     <span
-                                        class="flex-shrink mx-4 text-gray-900 text-3xl"
-                                        >Дијана & Виктор</span
+                                        class="flex-shrink mx-4 text-gray-900 text-3xl" style="font-family:'lovelygrace';font-size:350%;color:#4b024b"
+                                        >Дијана и Виктор</span
                                     >
                                     <div
                                         class="flex-grow border-t border-gray-400"
                                     ></div>
                                 </div>
                                 <p class="flex justify-center py-1">
-                                    Дата: 30-ти Октомври, 2022
-                                </p>
-                                <p class="flex justify-center py-1">
-                                    Прием: 18:00 - 18:30 часот
+                                    30 октомври 2022 | недела
                                 </p>
                                 <p
                                     class="sm:flex justify-center align-start py-1"
                                 >
-                                    Локација:
                                     <a
                                         target="_blank"
-                                        class="flex justify-center align-center inline-block px-6 py-2 bg-transparent text-blue-600 font-medium leading-tight rounded bg-fuchsia-200 focus:text-blue-700 focus:fuchsia-200 focus:outline-none focus:ring-0 active:bg-fuchsia-300 active:text-blue-800 transition duration-300 ease-in-out ml-2 text-base"
+                                        class="flex justify-center align-center inline-block px-6 py-2 bg-transparent text-blue-600 font-medium leading-tight rounded bg-fuchsia-200 focus:text-red-700 focus:fuchsia-200 focus:outline-none focus:ring-0 active:bg-fuchsia-300 active:text-blue-800 transition duration-300 ease-in-out ml-2 text-base"
                                         href="https://www.google.com/maps/place/Centropalas+letna+gradina/@42.1647837,21.7508051,17z/data=!3m1!4b1!4m5!3m4!1s0x135451e75876c7ff:0xa498503cb01ca030!8m2!3d42.1647837!4d21.7529991"
                                         ><img
                                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Google_Maps_icon_%282020%29.svg/16px-Google_Maps_icon_%282020%29.svg.png"
@@ -49,24 +45,49 @@
                                         ></a
                                     >
                                 </p>
+                                <p class="flex justify-center py-1">
+                                    Прием на гости од 18:00 до 18:30
+                                </p>
                                 <hr
                                     class="mt-4 h-px bg-gray-300 border-0 dark:bg-gray-700"
                                 />
                                 <p
                                     class="flex justify-center align-start py-1 w-1/16 text-center"
                                 >
-                                    Сите среќни моменти се потполни кога ги
-                                    споделуваш со роднини и пријатели. Затоа ве
-                                    покануваме да присуствувате на нашата
-                                    свадбена прослава.
+                                    Сите среќни моменти се комплетни кога ги
+                                    споделуваш со роднини и пријатели, па затоа ве
+                                    покануваме заедно да ја прославиме љубовта.
+                                </p>
+                                <p
+                                    class="flex justify-center align-start py-1 pb-3 w-1/16 text-center" style="font-size:14px"
+                                >
+                                    P.S. Наместо цвеќе, донесете грепка. 😊
                                 </p>
                             </div>
                             <div>
-                                <div
+                                <!-- <div
                                     class="flex justify-around align-start py-1"
                                 >
-                                    <span>Семејство Димковиќ</span>
-                                    <span>Семејство Ефтимови</span>
+                                    <span  style="font-family:'palai';font-weight:550">Семејство</span><br>
+                                    <span  style="font-family:'palai';font-weight:550">Димковиќ</span>
+                                    <span  style="font-family:'palai'">Семејство</span>
+                                    <span  style="font-family:'palai'">Ефтимови</span>
+                                </div> -->
+                                <div
+                                    class="flex justify-around align-start py-1">
+                                <div
+                                    style=""
+                                >
+                                    <span  style="font-family:'palai';font-weight:550">Семејство </span><br>
+                                    <span style="font-family:'palai';font-weight:550">Димковиќ</span>
+                                </div>
+                                <div
+                                    style=""
+                                >
+                                    <span  style="font-family:'palai'">Семејство </span>
+                                    <br>
+                                    <span style="font-family:'palai';font-weight:550">Ефтимови</span>
+                                </div>
                                 </div>
                             </div>
                             <!-- <div class="flex justify-around align-start py-1">
@@ -80,13 +101,13 @@
                                 </button>
                             </div> -->
                         </div>
-                        <hr
+                        <!-- <hr
                             class="mt-4 h-px bg-gray-300 border-0 dark:bg-gray-700"
-                        />
+                        /> -->
                         <Transition name="slide-fade">
                             <div class="">
                                 <div class="justify-center">
-                                    <div class="pt-4">
+                                    <div class="">
                                         <!-- <h5
                                             class="text-gray-900 text-xl font-medium mb-2 flex justify-center"
                                         >
@@ -99,28 +120,30 @@
                                                 class="flex-grow border-t border-gray-400"
                                             ></div>
                                             <span
-                                                class="flex-shrink mx-4 text-gray-900 text-2xl"
+                                                class="flex-shrink mx-4 text-gray-900 text-2xl" style="color:#4b024b"
                                                 >Потврди присуство</span
                                             >
                                             <div
                                                 class="flex-grow border-t border-gray-400"
                                             ></div>
                                         </div>
+                                        
                                         <div
                                             v-for="(user, index) in data"
                                             :key="index"
-                                            class="flex justify-start ml-10 sm:ml-4 md:ml-10 lg:ml-24 xl:ml-32"
+                                            class="flex justify-start ml-10 sm:ml-4 md:ml-10 lg:ml-32 xl:ml-32"
                                         >
+                                        
                                             <label
-                                                class="inline-flex items-center mt-3 cursor-pointer"
+                                                class="inline-flex items-center mt-3 cursor-pointer "
                                             >
                                                 <input
                                                     type="checkbox"
                                                     :checked="user.attending"
-                                                    class="form-checkbox h-5 w-5 text-gray-600 cursor-pointer"
+                                                    class="form-checkbox accent-purple-800 h-5 w-5 text-red-600 cursor-pointer "
                                                     v-model="user.attending"
                                                 /><span
-                                                    class="unselectable ml-2"
+                                                    class="unselectable ml-2 "
                                                     >{{ user.name }}</span
                                                 >
                                             </label>
@@ -138,7 +161,7 @@
                                                 type="button"
                                                 @click="submitRSVP"
                                                 :disabled="disabledBtn"
-                                                class="inline-block px-6 py-2.5 bg-blue-600 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
+                                                class="inline-block px-6 py-2.5 bg-purple-800 font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out text-white disabled:opacity-50 mr-3"
                                             >
                                                 Потврди
                                             </button>

@@ -1,22 +1,32 @@
 @tailwind base;
 @tailwind components;
 
-/* @font-face {
+  /* @font-face {
     font-family: 'Miama Nueva';
     src: local('Miama Nueva'), url(./fonts/miamanueva.ttf) format('ttf');
   } */
   @font-face {
-    font-family: 'constani';
-    src: local('constani'), url(../../public/fonts/constani.ttf) format('truetype');
+    font-family: 'constan';
+    src: local('constan'), url(../../public/fonts/constan.ttf) format('truetype');
   }
   /* @font-face {
     font-family: 'BadScript';
     src: local('Bad Script'), url(../../public/fonts/BadScript-Regular.ttf) format('truetype');
   } */
-  /* @font-face {
-    font-family: 'LovelyGraceBG';
-    src: local('Lovely Grace BG'), url(../../public/fonts/LovelѕGracе.ttf) format('truetype');
-  } */
+  @font-face {
+    font-family: 'lovelygrace';
+    src: local('lovelygrace'), url(../../public/fonts/LovelѕGracе.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'palai';
+    src: local('palai'), url(../../public/fonts/palai.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'linbiolinum';
+    src: local('linbiolinum'), url(../../public/fonts/LinBiolinum_R_G.ttf) format('truetype');
+  }
+
+
 
   
   

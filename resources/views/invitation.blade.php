@@ -15,8 +15,9 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            font-family: 'constani';
-            font-size: 22px;
+            font-family: 'linbiolinum';
+            font-size: 20px;
+            color: #660066;
         }
 
     </style>

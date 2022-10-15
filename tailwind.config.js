@@ -8,7 +8,7 @@ module.exports = {
     theme: {
         extend: {
           fontFamily: {
-            'sans': ['constani', 'Helvetica', 'Arial', 'sans-serif']
+            'sans': ['linbiolinum', 'constan', 'lovelygrace', 'palai', 'Helvetica', 'Arial', 'sans-serif']
           }
         },
       },
