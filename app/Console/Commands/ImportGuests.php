@@ -46,6 +46,8 @@ class ImportGuests extends Command
 
         unset($data[0]);
 
+        logger(json_encode($data));
+
         foreach ($data as $row) {
             if (User::where('excel_id', $row[0])->exists()) {
                 logger($row);

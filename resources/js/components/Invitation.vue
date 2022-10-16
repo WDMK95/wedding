@@ -1,6 +1,7 @@
 <template>
     <div
-        class="flex w-full justify-between font-sans font-medium mt-96 sm:mt-0"
+        id="invitation-card"
+        class="flex w-full justify-between font-sans font-medium sm:mt-0" style="margin-top: 500px;"
     >
         <div
             class="justify-end w-full p-4 sm:p-14 2xl:w-4/12 xl:w-5/12 md:w-7/12 sm:w-full"
